@@ -13,3 +13,19 @@ def solution(phone_book):
                 return False
     
     return True
+
+
+#2) 슬라이싱 -> 인덱스를 관리하는 방식으로 수정 - 똑같이 효율성 테스트 3, 4번 타임아웃
+def solution(phone_book):
+    (...)
+    
+    for i in range(l-1):
+        a = phone_book[i]
+        
+        # 리스트 슬라이싱 -> range 객체
+        for j in range(i+1, l):
+            b = phone_book[j]
+            if b.startswith(a):
+                return False
+    
+    return True
